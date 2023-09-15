@@ -65,6 +65,15 @@ textContent.addEventListener('mouseover', evt => {
 })
 
 //Event 10 PreventDefault
-
+const headerScroll = document.querySelector('.intro')
+window.addEventListener('scroll', evt => {
+    if (document.documentElement.scrollTop > 50) {
+        headerScroll.classList.toggle('bold') 
+    }
+})
+window.addEventListener('scroll', preventScroll, false)
+function preventScroll (evt) {
+    evt.preventDefault()
+}
 }
 
